@@ -1,22 +1,22 @@
 import express from "express";
-import PersonagemController from "../controllers/personagemController.js";
+import CollectionController from "../controllers/collectionController.js";
 
-const personagensRouter = express.Router();
+const collectionRouter = express.Router();
 
-// Rotas de Personagens
-// GET /personagens - Listar todos os Personagens
-personagensRouter.get("/", PersonagemController.getAllPersonagens);
+// Rotas de Coleções
+// GET /colecoes - Listar todas as Coleções
+collectionRouter.get("/", CollectionController.getAllCollections);
 
-// GET /personagens/:id - Obter um Personagem pelo ID
-personagensRouter.get("/:id", PersonagemController.getPersonagemById);
+// GET /colecoes/:id - Obter um Personagem pelo ID
+ collectionRouter.get("/:id", CollectionController.getCollectionById);
 
-// POST /personagens - Criar um novo Personagem
-personagensRouter.post("/", PersonagemController.createPersonagem);
+// POST /colecoes - Criar uma nova Collections
+collectionRouter.post("/", CollectionController.createCollection);
 
-// PUT /personagens/:id - Atualizar um Personagem
-personagensRouter.put("/:id", PersonagemController.updatePersonagem);
+// PUT /colecoes/:id - Atualizar um Collections
+collectionRouter.put("/:id", CollectionController.updateCollection);
 
-// DELETE /personagens/:id - Remover um Personagem
-personagensRouter.delete("/:id", PersonagemController.deletePersonagem);
+// DELETE /colecoes/:id - Remover um Collections
+collectionRouter.delete("/:id", CollectionController.deleteCollection);
 
-export default personagensRouter;
+export default collectionRouter;
